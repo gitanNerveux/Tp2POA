@@ -11,6 +11,7 @@ namespace Tp2POA.Models
 		public DateTime DateEntreeFonction;
 		public string Mail;
 		public string Ville;
+		public int MedecinID;
 	}
 }
 

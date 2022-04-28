@@ -1,5 +1,7 @@
 ﻿var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddMvc(option => option.EnableEndpointRouting = false);
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -19,6 +21,8 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMvc();
 
 app.Run();
 

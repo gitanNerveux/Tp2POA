@@ -9,6 +9,7 @@ namespace Tp2POA.Models
 		}
 
 		public bool Diagnostic;
+		public int PatientID;
 	}
 }
 
