@@ -9,6 +9,8 @@ namespace Tp2POA.Models
 
 		public DbSet<Medecin> Medecins { get; set; }
 
+		public DbSet<Diagnostic> Diagnostics { get; set; }
+
 		protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
 			string connexionString = "" +

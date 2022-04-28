@@ -8,7 +8,7 @@ namespace Tp2POA.Models
 	{
 		public Medecin()
 		{
-
+			Patients = new List<Patient>();
 		}
 
 		public int MedecinId { get; set; }
@@ -25,6 +25,8 @@ namespace Tp2POA.Models
 		public string Mail { get; set; }
 		public string Ville { get; set; }
 		public string Mdp { get; set; }
+
+		public ICollection<Patient> Patients { get; set; }
 	}
 }
 

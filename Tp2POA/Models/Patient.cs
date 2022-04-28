@@ -7,7 +7,7 @@ namespace Tp2POA.Models
 	{
 		public Patient()
 		{
-			
+			Diagnostics = new List<Diagnostic>();
 		}
 
 		public int PatientId { get; set; }
@@ -21,7 +21,10 @@ namespace Tp2POA.Models
 		public DateTime DateDeNaissance { get; set; }
 		public string Genre { get; set; }
 		public bool Diagnostic { get; set; }
-		public bool Singe { get; set; }
+		public int MedecinId { get; set; }
+		public Medecin Medecin { get; set; }
+
+		public ICollection<Diagnostic> Diagnostics { get; set; }
 	}
 }
 

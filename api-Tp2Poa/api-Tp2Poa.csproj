@@ -27,4 +27,9 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Pomelo.EntityFrameworkCore.MySql" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tp2POA\Tp2POA.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
