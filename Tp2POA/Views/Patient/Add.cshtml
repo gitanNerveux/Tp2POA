@@ -1,0 +1,24 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewBag.Title = "Ajouter";
+    Layout = "_Layout";
+}
+
+@model Tp2POA.Models.Patient;
+
+<form asp-action="Add">
+    <label asp-for="Nom">Nom : </label>
+    <input type="text" asp-for="Nom" />
+    <span asp-validation-for="Nom"></span>
+
+    <br />
+
+    <label asp-for="Prenom">Prenom : </label>
+    <input type="text" asp-for="Prenom" />
+    <span asp-validation-for="Prenom"></span>
+
+    <br />
+
+    <input type="submit" value="Ajouter" />
+</form>

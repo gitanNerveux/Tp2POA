@@ -1,0 +1,12 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+@model List<Tp2POA.Models.Patient>
+
+@foreach (var patients in Model)
+{
+    <partial name="_Title" model="patients" />
+}
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tp2POA", "Tp2POA\Tp2POA.csproj", "{50AC340A-D584-46DA-BC01-BDEE3CFAA8AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-Tp2Poa", "api-Tp2Poa\api-Tp2Poa.csproj", "{50D94BA0-652D-4E6B-B57D-900B680367A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50AC340A-D584-46DA-BC01-BDEE3CFAA8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50AC340A-D584-46DA-BC01-BDEE3CFAA8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50AC340A-D584-46DA-BC01-BDEE3CFAA8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50AC340A-D584-46DA-BC01-BDEE3CFAA8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D94BA0-652D-4E6B-B57D-900B680367A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D94BA0-652D-4E6B-B57D-900B680367A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D94BA0-652D-4E6B-B57D-900B680367A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D94BA0-652D-4E6B-B57D-900B680367A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F0F154C-CEF5-4EE1-8449-010EEB41EFC8}
+	EndGlobalSection
+EndGlobal
