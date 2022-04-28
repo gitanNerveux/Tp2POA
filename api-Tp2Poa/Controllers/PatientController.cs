@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Tp2POA.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,12 +13,7 @@ namespace api_Tp2Poa.Controllers
     [ApiController]
     public class PatientController : ControllerBase
     {
-        private Tp2POA.Models. _context;
-
-        public PatientController()
-        {
-            _context = new Tp2PoaContext()
-        }
+        
         // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()
