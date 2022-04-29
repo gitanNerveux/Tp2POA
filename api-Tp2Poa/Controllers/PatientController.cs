@@ -22,6 +22,7 @@ namespace api_Tp2Poa.Controllers
             _context = new Tp2POA.Models.Tp2POAContext();
         }
 
+        [HttpGet]
         public IActionResult GetPatients(int MedecinId)
         {
             try
@@ -40,7 +41,7 @@ namespace api_Tp2Poa.Controllers
 
         
         // GET: api/patients/id/diagnostics
-        [HttpGet(Name ="{id}/diagnostics")]
+        [HttpGet("{id}/diagnostics")]
         public IActionResult GetPatientDiagnostics(int patientId)
         {
             try

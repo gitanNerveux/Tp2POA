@@ -11,8 +11,8 @@ using Tp2POA.Models;
 namespace Tp2POA.Migrations
 {
     [DbContext(typeof(Tp2POAContext))]
-    [Migration("20220428055928_Migrations")]
-    partial class Migrations
+    [Migration("20220428164254_MyFirstMigration")]
+    partial class MyFirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,22 @@ namespace Tp2POA.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("Tp2POA.Models.Diagnostic", b =>
+                {
+                    b.Property<int>("DiagnosticId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("PatientId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DiagnosticId");
+
+                    b.HasIndex("PatientId");
+
+                    b.ToTable("Diagnostics");
+                });
 
             modelBuilder.Entity("Tp2POA.Models.Medecin", b =>
                 {
@@ -78,6 +94,9 @@ namespace Tp2POA.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("MedecinId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nom")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -88,7 +107,41 @@ namespace Tp2POA.Migrations
 
                     b.HasKey("PatientId");
 
+                    b.HasIndex("MedecinId");
+
                     b.ToTable("Patients");
+                });
+
+            modelBuilder.Entity("Tp2POA.Models.Diagnostic", b =>
+                {
+                    b.HasOne("Tp2POA.Models.Patient", "Patient")
+                        .WithMany("Diagnostics")
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("Tp2POA.Models.Patient", b =>
+                {
+                    b.HasOne("Tp2POA.Models.Medecin", "Medecin")
+                        .WithMany("Patients")
+                        .HasForeignKey("MedecinId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Medecin");
+                });
+
+            modelBuilder.Entity("Tp2POA.Models.Medecin", b =>
+                {
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("Tp2POA.Models.Patient", b =>
+                {
+                    b.Navigation("Diagnostics");
                 });
 #pragma warning restore 612, 618
         }

@@ -15,7 +15,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(config => config.SwaggerEndpoint("/swagger/v1/swagger.json","TP2 Rest API v1.0"));
 }
 
 app.UseAuthorization();
