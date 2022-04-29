@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Connexon";
+}
+
+@model Tp2POA.Models.Medecin
+
+<form asp-action="ShowMedecin">
+
+    <label asp-for="Mail">Mail : </label>
+    <input type="text" asp-for="Mail" />
+    <span asp-validation-for="Mail"></span>
+
+    <br />
+
+    <label asp-for="Mdp">Mdp : </label>
+    <input type="text" asp-for="Mdp" />
+    <span asp-validation-for="Mdp"></span>
+
+    <br />
+
+    <input type="submit" value="Se connecter" />
+</form>
